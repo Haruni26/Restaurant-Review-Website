@@ -1,0 +1,161 @@
+:root {
+  --primary-color: #ecebeb;
+  --secondary-color: #002e3b;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  font-family: var(--font-familty);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+header {
+  color: var(--primary-color);
+  padding: 1rem;
+  text-align: left;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #333;
+}
+
+header nav ul li a:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: ease-in-out 0.2s;
+}
+
+section {
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+section h3 {
+  color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.discover-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.discover-container section {
+  max-width: 250px;
+}
+
+.restaurant-row {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: mandatory;
+  white-space: nowrap;
+}
+
+.restaurant-row section {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.restaurant-row section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.restaurant-row section:nth-child(2) {
+  animation-delay: 0.25s;
+}
+.restaurant-row section:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.restaurant-row section:nth-child(4) {
+  animation-delay: 0.65s;
+}
+
+.restaurant-row section:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.box {
+  background-color: white;
+  border-radius: 15px;
+  width: 270px;
+  height: 400px;
+  box-shadow: 5px 0 5px rgba(255, 255, 255, 0.882);
+}
+
+.box-subheading {
+  color: black;
+  text-align: left;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px;
+  border: 5px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 5px;
+  border-color: var(--secondary-color);
+}
+
+img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+p {
+  padding: 4px;
+}
+
+footer {
+  text-align: center;
+}
